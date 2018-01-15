@@ -18,7 +18,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'rvm use 1.9.3'
                 sh 'bundle install'
             }
         }

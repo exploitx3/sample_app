@@ -24,6 +24,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'rvm use 1.9.3'
                 sh 'rake spec'
             }
         }

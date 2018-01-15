@@ -18,13 +18,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'rvm use 1.9.3'
                 sh 'bundle install'
             }
         }
         stage('Test') {
             steps {
-            //Fix for nodeunit failing
-                sh 'bundle exec rails test'
+                sh 'rake spec'
             }
         }
     }

@@ -19,6 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'rvm use 1.9.3'
+                sh 'gem uninstall --force rake'
                 sh 'bundle install'
             }
         }
